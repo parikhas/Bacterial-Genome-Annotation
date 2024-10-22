@@ -21,7 +21,7 @@ The pipeline creates conda environments from the yaml file for each of the steps
 
 Usage
 
-1. Configure the Pipeline
+1. Configure the Pipeline:
 
 Create a config.yaml file in the pipeline directory:
 
@@ -29,11 +29,11 @@ input_dir: "path/to/input/directory"
 output_dir: "path/to/output/directory"
 sample_name: "your_sample_name"
 
-2. Prepare Your Data
+2. Prepare Your Data:
 
 Place your FASTQ file in the input directory with the naming format:
 <input_dir>/<sample_name>.fastq
 
-3. Run the Pipeline
+3. Run the Pipeline:
 
 snakemake --cores all --use-conda --conda-frontend conda
