@@ -17,7 +17,7 @@ Software Requirements:
 Snakemake (≥6.0.0)
 conda (>20.0.0)
 
-The pipeline creates conda environments from the yaml file for each of the steps. This eliminates the need to install any packages locally and ensures reproducibility.
+The pipeline creates conda environments from the yaml file for each of the steps(rules). This eliminates the need to install any packages locally and ensures reproducibility.
 
 Usage
 
@@ -25,8 +25,8 @@ Usage
 
 Create a config.yaml file in the pipeline directory:
 
-input_dir: "path/to/input/directory"
-output_dir: "path/to/output/directory"
+input_dir: "path/to/input/directory"<br/>
+output_dir: "path/to/output/directory"<br/>
 sample_name: "your_sample_name"
 
 2. Prepare Your Data:
@@ -37,3 +37,4 @@ Place your FASTQ file in the input directory with the naming format:
 3. Run the Pipeline:
 
 snakemake --cores all --use-conda --conda-frontend conda
+
