@@ -1,3 +1,6 @@
+# Rule for genome annotation using Prokka
+# Annotates the polished genome assembly
+
 rule annotate_prokka:
     input:
         polished_assembly = f"{output_dir}/medaka/consensus.fasta"

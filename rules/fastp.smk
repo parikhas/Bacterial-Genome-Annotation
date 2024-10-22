@@ -1,3 +1,6 @@
+# Rule for quality control using fastp
+# Performs quality filtering and trimming of raw reads
+
 rule qc_fastp:
     input:
         f"{input_dir}/{sample}.fastq"

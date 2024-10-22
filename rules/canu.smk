@@ -1,3 +1,6 @@
+# Rule for genome assembly using Canu
+# Assembles filtered reads into contigs
+
 rule canu_assembly:
     input:
         f"{output_dir}/qc/{sample}_filtered.fastq"
@@ -6,6 +9,4 @@ rule canu_assembly:
     conda:
         "../envs/canu.yaml"
     shell:
-        """
-        canu -p {sample} -d {output_dir}/canu_assembly genomeSize=4.8m -nanopore-raw {input} 
-        """
+        "canu -p {sample} -d {output_dir}/canu_assembly genomeSize=4.8m -nanopore-raw {input}"
